@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rally 2026 — Terugblik | Overdrive</title>
+<meta name="description" content="Terugblik op Rally 2026, georganiseerd door Overdrive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <svg viewBox="0 0 200 200" class="loader-gauge">
+    <circle cx="100" cy="100" r="80" class="loader-ring"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../images/logo.jpg" alt="Overdrive" class="nav-logo">
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="../index.html#evenementen" data-nav>Evenementen</a>
+    <a href="../index.html#wie-zijn-we" data-nav>Wie zijn we</a>
+    <a href="../index.html#sponsors" data-nav>Sponsorpakketten</a>
+    <a href="#contact" data-nav class="nav-cta">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top" style="--edition-color:#2b3fb0;">
+
+  <p class="breadcrumb"><a href="../index.html">Overdrive</a><span>/</span><a href="../index.html#evenementen">Evenementen</a><span>/</span>Rally 2026</p>
+
+  <!-- EVENT HERO -->
+  <section class="event-hero">
+    <div class="event-hero-bg" aria-hidden="true"></div>
+
+    <span class="status-badge"><span class="status-badge-dot"></span>Editie voltooid</span>
+    <h1 class="hero-title">RALLY <span style="color:var(--edition-color);">2026</span></h1>
+    <p class="hero-tagline">Terugblik — donkerblauw thema</p>
+
+    <svg viewBox="0 0 320 200" class="static-gauge" role="img" aria-label="Gauge op vol, editie voltooid">
+      <line x1="60" y1="170" x2="260" y2="170" style="stroke:var(--line);stroke-width:6;stroke-linecap:round;"/>
+      <line x1="60" y1="170" x2="260" y2="170" style="stroke:var(--edition-color);stroke-width:6;stroke-linecap:round;"/>
+      <line x1="160" y1="170" x2="160" y2="60" class="static-gauge-needle"/>
+      <circle cx="160" cy="170" r="8" class="static-gauge-hub"/>
+    </svg>
+    <p class="static-gauge-label">Volle rit, geslaagde editie</p>
+  </section>
+
+  <!-- STATS -->
+  <div class="stat-grid" style="--edition-color:#2b3fb0;">
+    <div class="stat-card">
+      <span class="stat-number">64</span>
+      <span class="stat-label">Deelnemende wagens</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">180</span>
+      <span class="stat-label">Km parcours</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Categorieën</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">1</span>
+      <span class="stat-label">Onvergetelijke dag</span>
+    </div>
+  </div>
+  <p style="text-align:center; color:var(--muted-dim); font-family:var(--font-mono); font-size:0.75rem; margin-top:-70px; padding-bottom:60px;">Cijfers ter illustratie — vervang door de echte uitslag van de editie.</p>
+
+  <!-- GALLERY -->
+  <section class="section" id="terugblik-foto">
+    <div class="section-head gallery-head">
+      <div>
+        <span class="gauge-tick-mark" aria-hidden="true" style="background:#2b3fb0;"></span>
+        <h2>Sfeerbeelden</h2>
+        <p class="section-sub">Proef de sfeer van Rally 2026 — vervang de tegels hieronder door foto's.</p>
+      </div>
+      <!-- Link naar het volledige fotoalbum: vervang href door de echte Drive/album-link -->
+      <a href="https://drive.google.com/drive/folders/1KmbII7BZd3j06BNtIY8hn1Jp9V_P7p_y" target="_blank" rel="noopener" class="btn btn-primary gallery-link">
+        Volledig fotoalbum ↗
+      </a>
+    </div>
+
+    <div class="photo-wall">
+      <div class="photo-tile is-big" data-label="Startpodium"><span class="sfeer-icon">🏁</span></div>
+      <div class="photo-tile" data-label="Oldtimers"><span class="sfeer-icon">🚗</span></div>
+      <div class="photo-tile" data-label="4x4 parcours"><span class="sfeer-icon">🚙</span></div>
+      <div class="photo-tile" data-label="Publiek"><span class="sfeer-icon">📣</span></div>
+      <div class="photo-tile is-tall" data-label="De Backyard"><span class="sfeer-icon">🔥</span></div>
+      <div class="photo-tile" data-label="Prijsuitreiking"><span class="sfeer-icon">🏆</span></div>
+      <div class="photo-tile" data-label="Nachtrit"><span class="sfeer-icon">🌙</span></div>
+      <div class="photo-tile is-big" data-label="Techniek &amp; sleutelen"><span class="sfeer-icon">🔧</span></div>
+      <div class="photo-tile" data-label="Onderweg"><span class="sfeer-icon">🛣️</span></div>
+      <div class="photo-tile" data-label="Deelnemers"><span class="sfeer-icon">🙌</span></div>
+      <div class="photo-tile" data-label="Finish"><span class="sfeer-icon">🎉</span></div>
+      <div class="photo-tile" data-label="Groepsfoto"><span class="sfeer-icon">📸</span></div>
+    </div>
+
+    <p class="gallery-note">Tip: vervang elke <code>.photo-tile</code> door een <code>&lt;img&gt;</code> met de echte foto zodra ze uit de Drive-map staan. De groottevarianten (<code>is-big</code>, <code>is-tall</code>) blijven gewoon werken met echte foto's.</p>
+  </section>
+
+  <!-- PODIUM -->
+  <section class="section section-alt" id="uitslag">
+    <div class="section-head">
+      <span class="gauge-tick-mark" aria-hidden="true" style="background:#2b3fb0;"></span>
+      <h2>Uitslag</h2>
+      <p class="section-sub">De top 3 van Rally 2026.</p>
+    </div>
+    <div class="podium-grid">
+      <div class="podium-card rank-2">
+        <span class="podium-rank">2</span>
+        <p class="podium-name">Naam &amp; wagen</p>
+        <p class="podium-detail">Vul de resultaten aan</p>
+      </div>
+      <div class="podium-card rank-1">
+        <span class="podium-rank">1</span>
+        <p class="podium-name">Naam &amp; wagen</p>
+        <p class="podium-detail">Vul de resultaten aan</p>
+      </div>
+      <div class="podium-card rank-3">
+        <span class="podium-rank">3</span>
+        <p class="podium-name">Naam &amp; wagen</p>
+        <p class="podium-detail">Vul de resultaten aan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR THANKS -->
+  <section class="section" id="dank">
+    <div class="section-head">
+      <span class="gauge-tick-mark" aria-hidden="true" style="background:#2b3fb0;"></span>
+      <h2>Met dank aan</h2>
+      <p class="section-sub">Rally 2026 was er niet gekomen zonder onze sponsors.</p>
+    </div>
+    <div class="thanks-row">
+      <span class="thanks-chip">Sponsor A</span>
+      <span class="thanks-chip">Sponsor B</span>
+      <span class="thanks-chip">Sponsor C</span>
+      <span class="thanks-chip">Sponsor D</span>
+    </div>
+  </section>
+
+  <p class="recap-cta">
+    <a href="../index.html#evenementen" class="btn btn-ghost">← Terug naar alle evenementen</a>
+  </p>
+
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer class="contact" id="contact">
+  <div class="contact-inner">
+    <img src="../images/logo.jpg" alt="Overdrive" class="contact-logo">
+    <div class="contact-details">
+      <a href="mailto:andredenaeghel@icloud.com">andredenaeghel@icloud.com</a>
+      <a href="tel:+32476532100">+32 476 53 21 00</a>
+    </div>
+    <p class="contact-note">Pure cars, pure fun — sinds jaar en dag.</p>
+  </div>
+</footer>
+
+<script src="/"></script>
+</body>
+</html>

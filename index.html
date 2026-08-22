@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdrive — Pure Cars, Pure Fun</title>
+    <meta name="description" content="Overdrive organiseert rally-evenementen en cruises voor liefhebbers van oldtimers, moderne bolides en 4x4's.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Gauge sweep loader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <svg viewBox="0 0 200 200" class="loader-gauge">
+    <circle cx="100" cy="100" r="80" class="loader-ring"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-brand">
+    <img src="images/niuewlogo.jpg" alt="Overdrive" class="nav-logo">
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#evenementen" data-nav>Evenementen</a>
+    <a href="#wie-zijn-we" data-nav>Wie zijn we</a>
+    <a href="#sponsors" data-nav>Sponsorpakketten</a>
+    <a href="#sponsorwand" data-nav>Sponsors</a>
+    <a href="#contact" data-nav class="nav-cta">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow"><span class="eyebrow-dash"></span>Volgend evenement<span class="eyebrow-dash"></span></p>
+      <h1 class="hero-title">RALLY <span class="hero-year" id="nextYear">2027</span></h1>
+      <p class="hero-tagline">Pure cars, pure fun.</p>
+
+      <div class="gauge-block">
+        <svg viewBox="0 0 320 200" class="gauge" id="gauge" role="img" aria-label="Countdown gauge naar volgend evenement">
+          <g id="gaugeTicks"></g>
+          <line id="gaugeNeedle" x1="160" y1="170" x2="160" y2="60" class="gauge-needle"/>
+          <circle cx="160" cy="170" r="8" class="gauge-hub"/>
+        </svg>
+        <div class="gauge-readout">
+          <span class="gauge-number" id="daysLeft">--</span>
+          <span class="gauge-label">dagen te gaan</span>
+        </div>
+      </div>
+
+      <p class="hero-date" id="eventDate">Datum volgt binnenkort</p>
+      <a href="#evenementen" class="btn btn-primary">Bekijk evenementen ↓</a>
+    </div>
+  </section>
+
+
+  <!-- EVENEMENTEN -->
+  <section class="section" id="evenementen">
+    <div class="section-head">
+      <span class="gauge-tick-mark" aria-hidden="true"></span>
+      <h2>Evenementen</h2>
+      <p class="section-sub">Elke editie krijgt haar eigen kleur. Rijd mee, of kom kijken.</p>
+    </div>
+
+    <div class="event-grid">
+      <a class="event-card is-next" style="--edition-color:#2b3fb0;" href="rally2026.html">
+        <div class="event-card-top">
+          <span class="event-tag">Vorige editie</span>
+          <span class="event-year">2026</span>
+        </div>
+        <h3>Rally 2026</h3>
+        <p>Donkerblauw thema. Onze eerste en zeer succesvolle editie</p>
+        <div class="event-chips">
+          <span>Oldtimers</span><span>Moderne sportwagens</span><span>4x4</span>
+        </div>
+    </a>
+
+      <a class="event-card" style="--edition-color:#1f5c42;" href="rally2027.html">
+        <div class="event-card-top">
+          <span class="event-tag">In voorbereiding</span>
+          <span class="event-year">2027</span>
+        </div>
+        <h3>Rally 2027</h3>
+        <p>Donkergroen thema. Parcours en inschrijvingen volgen binnenkort — hou deze pagina in de gaten.</p>
+        <div class="event-chips">
+          <span>Oldtimers</span><span>Moderne sportwagens</span><span>4x4</span>
+        </div>
+    </a>
+
+      <article class="event-card event-card-ghost">
+        <div class="event-card-top">
+          <span class="event-tag">Toekomst</span>
+        </div>
+        <h3>Er komen er zeker nog meer</h3>
+        <p>Naast onze jaarlijkse rally zijn wij ook al aan het kijken voor nog andere evenementen te organiseren.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- WIE ZIJN WE -->
+  <section class="section section-alt" id="wie-zijn-we">
+    <div class="section-head">
+      <span class="gauge-tick-mark" aria-hidden="true"></span>
+      <h2>Wie zijn we</h2>
+      <p class="section-sub">Twee autoliefhebbers met een gedeelde passie voor alle soorten wagens.</p>
+    </div>
+
+    <div class="people-grid">
+      <article class="person-card">
+        <div class="person-avatar" aria-hidden="true">AD</div>
+        <h3>André Denaeghel</h3>
+        <p class="person-role">Oprichter &amp; organisatie</p>
+        <p>Zet samen met Louis elk jaar de rally op poten — van parcours tot planning.</p>
+      </article>
+      <article class="person-card">
+        <div class="person-avatar" aria-hidden="true">L</div>
+        <h3>Louis Depondt</h3>
+        <p class="person-role">Oprichter &amp; Organisatie</p>
+        <p>Zorgt samen met André dat elke editie soepel en met veel plezier verloopt.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section class="section" id="sponsors">
+    <div class="section-head">
+      <span class="gauge-tick-mark" aria-hidden="true"></span>
+      <h2>Sponsorpakketten</h2>
+      <p class="section-sub">Steun Overdrive en rijd mee met je merk voorop.</p>
+    </div>
+
+    <div class="sponsor-grid">
+      <article class="sponsor-card">
+        <h3>Brons</h3>
+        <p class="sponsor-desc">Logo op de website en op het startpodium.</p>
+        <ul class="sponsor-list">
+          <li>Vermelding op overdrive.be</li>
+          <li>Logo op infobord ter plaatse</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Interesse? Neem contact op</a>
+      </article>
+      <article class="sponsor-card is-featured">
+        <span class="sponsor-badge">Populair</span>
+        <h3>Zilver</h3>
+        <p class="sponsor-desc">Zichtbaarheid op de website, ter plaatse én op de deelnemerswagens.</p>
+        <ul class="sponsor-list">
+          <li>Alles van Brons</li>
+          <li>Logo op rally-shirts</li>
+          <li>Vermelding op social media</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Interesse? Neem contact op</a>
+      </article>
+      <article class="sponsor-card">
+        <h3>Goud</h3>
+        <p class="sponsor-desc">Hoofdsponsor: naam verbonden aan de editie.</p>
+        <ul class="sponsor-list">
+          <li>Alles van Zilver</li>
+          <li>Naamsvermelding "Rally 2026 by [sponsor]"</li>
+          <li>Extra zichtbaarheid op het evenement</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Interesse? Neem contact op</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- SPONSORWAND -->
+
+
+   <section class="section section-alt sponsor-wall" id="sponsorwand">
+    <div class="section-head">
+      <span class="gauge-tick-mark" aria-hidden="true"></span>
+      <h2>Mogelijk gemaakt door onze sponsors</h2>
+    </div>
+    <div class="sponsor-marquee" aria-label="Doorlopende sponsorband">
+      <div class="sfeer-track" id="sfeerTrack">
+        <!-- repeated for seamless loop via JS -->
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/buitenhuis.png" alt="buitenhuis logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span></div>
+        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
+      </div>
+    </div>
+  </section>
+
+  
+
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-title">
+      <h2>Contact</h2>
+      <p>Vragen over de rally, sponsoring of deelname? Stuur ons gerust een bericht.</p>
+    </div>
+    <img src="images/niuewlogo.jpg" alt="Overdrive" class="contact-logo">
+    <div class="contact-details">
+      <article class="contact-card">
+        <h3>André Denaeghel</h3>
+        <p>Oprichter &amp; organisatie</p>
+        <a href="mailto:andredenaeghel@icloud.com">andredenaeghel@icloud.com</a>
+        <a href="tel:+32476532100">+32 476 53 21 00</a>
+        <a href="https://www.instagram.com/andredenaeghel/">Instagram André</a>
+      </article>
+
+      <article class="contact-card">
+        <h3>Louis Depondt</h3>
+        <p>Oprichter &amp; organisatie</p>
+        <a href="mailto:louis@overdrive.be">louis@overdrive.be</a>
+        <a href="tel:+32000000000">+32 000 00 00 00</a>
+        <a href="https://www.instagram.com/louis_depondt/">Instagram Louis</a>
+      </article>
+
+      <article class="contact-card">
+        <h3>Overdrive</h3>
+        <p>Pure cars, pure fun.</p>
+        <a>Overdrive vzw, België</a>
+        <p>blijf op de hoogte via onze instagram</p>
+        <!-- <a href="mailto:info@overdrive.be">info@overdrive.be</a> -->
+        <a href="https://www.instagram.com/overdrivebelgium/">Instagram Overdrive</a>
+      </article>
+    </div>
+    <p class="contact-note">Pure cars, pure fun — sinds jaar en dag.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
