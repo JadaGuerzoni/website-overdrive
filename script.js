@@ -1,6 +1,6 @@
 // ===== Config =====
 // Pas deze datum aan zodra de echte datum van Rally 2026 gekend is.
-// const NEXT_EVENT_DATE = new Date('2026-09-19T09:00:00');
+const NEXT_EVENT_DATE = new Date('2027-05-20T09:00:00');
 
 // ===== Loader =====
 window.addEventListener('load', () => {

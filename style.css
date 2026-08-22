@@ -701,40 +701,7 @@ ul {
   letter-spacing: 0.08em;
 }
 
-/* Backyard */
-.backyard {
-  display: none;
-  padding: 0;
-}
-.backyard-inner {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 40px;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 90px 20px;
-}
-.backyard-text p {
-  color: var(--muted);
-  margin-top: 16px;
-  max-width: 46ch;
-}
-.backyard-visual {
-  aspect-ratio: 1;
-  border-radius: var(--radius);
-  background: radial-gradient(circle, rgba(229, 56, 74, 0.22), var(--bg-alt-2) 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.2rem;
-  border: 1px solid var(--line);
-}
-@media (max-width: 780px) {
-  .backyard-inner {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Reveal on scroll */
 .section,
@@ -1454,39 +1421,7 @@ ul {
   text-align: center;
 }
 
-/* Backyard */
-.backyard {
-  padding: 0;
-}
-.backyard-inner {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 40px;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 90px 20px;
-}
-.backyard-text p {
-  color: var(--muted);
-  margin-top: 16px;
-  max-width: 46ch;
-}
-.backyard-visual {
-  aspect-ratio: 1;
-  border-radius: var(--radius);
-  background: radial-gradient(circle, rgba(229, 56, 74, 0.22), var(--bg-alt-2) 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.2rem;
-  border: 1px solid var(--line);
-}
-@media (max-width: 780px) {
-  .backyard-inner {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Reveal on scroll */
 .section,
@@ -1716,53 +1651,7 @@ ul {
   }
 }
 
-/* Podium */
-.podium-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  align-items: end;
-}
-.podium-card {
-  background: var(--bg-alt-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 26px;
-  text-align: center;
-  position: relative;
-}
-.podium-card.rank-1 {
-  border-color: var(--red);
-  padding-top: 34px;
-}
-.podium-rank {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  font-family: var(--font-mono);
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-.podium-card.rank-1 .podium-rank {
-  background: var(--red);
-  border-color: var(--red);
-  color: var(--white);
-}
-.podium-name {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-size: 1.15rem;
-}
-.podium-detail {
-  color: var(--muted);
-  font-size: 0.85rem;
-  margin-top: 4px;
-}
+
 
 /* Sponsor thanks */
 .thanks-row {
@@ -1930,11 +1819,14 @@ ul {
 /* Inschrijven */
 .register-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  max-width: var(--container);
   margin: 0 auto;
+  padding: 0 20px 100px;
 }
+
+  
 .register-step {
   background: var(--bg-alt-2);
   border: 1px solid var(--line);
