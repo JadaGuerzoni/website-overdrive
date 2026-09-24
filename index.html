@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overdrive — Pure Cars, Pure Fun</title>
+    <title>Overdrive</title>
     <meta name="description" content="Overdrive organiseert rally-evenementen en cruises voor liefhebbers van oldtimers, moderne bolides en 4x4's.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,10 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <video class="hero-video-bg" autoplay muted loop playsinline aria-hidden="true">
+      <source src="video/Mijn film 2.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
       <p class="eyebrow"><span class="eyebrow-dash"></span>Volgend evenement<span class="eyebrow-dash"></span></p>
       <h1 class="hero-title">RALLY <span class="hero-year" id="nextYear">2027</span></h1>
@@ -70,7 +73,7 @@
     <div class="section-head">
       <span class="gauge-tick-mark" aria-hidden="true"></span>
       <h2>Evenementen</h2>
-      <p class="section-sub">Elke editie krijgt haar eigen kleur. Rijd mee, of kom kijken.</p>
+      <p class="section-sub">Elke editie krijgt zijn eigen kleur. Rijd mee, of kom kijken.</p>
     </div>
 
     <div class="event-grid">
@@ -92,7 +95,7 @@
           <span class="event-year">2027</span>
         </div>
         <h3>Rally 2027</h3>
-        <p>Donkergroen thema. Parcours en inschrijvingen volgen binnenkort — hou deze pagina in de gaten.</p>
+        <p>Donkergroen thema. Parcours en inschrijvingen volgen binnenkort. Hou deze pagina in de gaten.</p>
         <div class="event-chips">
           <span>Oldtimers</span><span>Moderne sportwagens</span><span>4x4</span>
         </div>
@@ -113,22 +116,35 @@
     <div class="section-head">
       <span class="gauge-tick-mark" aria-hidden="true"></span>
       <h2>Wie zijn we</h2>
-      <p class="section-sub">Twee autoliefhebbers met een gedeelde passie voor alle soorten wagens.</p>
+      <!-- <p class="section-sub">Twee autoliefhebbers met een gedeelde passie voor alle soorten wagens.</p> -->
     </div>
 
-    <div class="people-grid">
-      <article class="person-card">
-        <div class="person-avatar" aria-hidden="true">AD</div>
-        <h3>André Denaeghel</h3>
-        <p class="person-role">Oprichter &amp; organisatie</p>
-        <p>Zet samen met Louis elk jaar de rally op poten — van parcours tot planning.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-avatar" aria-hidden="true">L</div>
-        <h3>Louis Depondt</h3>
-        <p class="person-role">Oprichter &amp; Organisatie</p>
-        <p>Zorgt samen met André dat elke editie soepel en met veel plezier verloopt.</p>
-      </article>
+    <div class="about-layout">
+      <div class="about-content">
+        <div class="founding-story">
+          <span class="founding-badge">Het ontstaan</span>
+          <p>Overdrive begon met twee autoliefhebbers en een gedeelde droom: een rally organiseren zoals zij die zelf zouden willen rijden. Wat startte als een idee tussen vrienden, groeide uit tot een terugkerend evenement voor iedereen met benzine in de aderen — pure cars, pure fun, sinds dag één.</p>
+        </div>
+
+        <div class="people-grid">
+          <article class="person-card">
+            <div class="person-avatar" aria-hidden="true">AD</div>
+            <h3>André Denaeghel</h3>
+            <p class="person-role">Oprichter &amp; organisatie</p>
+            <!-- <p>Zet samen met Louis elk jaar de rally op poten — van parcours tot planning.</p> -->
+          </article>
+          <article class="person-card">
+            <div class="person-avatar" aria-hidden="true">L</div>
+            <h3>Louis Depondt</h3>
+            <p class="person-role">Oprichter &amp; Organisatie</p>
+            <!-- <p>Zorgt samen met André dat elke editie soepel en met veel plezier verloopt.</p> -->
+          </article>
+        </div>
+      </div>
+
+      <div class="about-photo">
+        <img src="images/team.jpg" alt="Het Overdrive team" class="team-photo">
+      </div>
     </div>
   </section>
 
@@ -185,14 +201,14 @@
     <div class="sponsor-marquee" aria-label="Doorlopende sponsorband">
       <div class="sfeer-track" id="sfeerTrack">
         <!-- repeated for seamless loop via JS -->
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/buitenhuis.png" alt="buitenhuis logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span></div>
-        <div class="sponsor-item"><span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span></div>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/buitenhuis.png" alt="buitenhuis logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/backyard.png" alt="Backyard logo"></span>
+        <span class="sponsor-logo"><img class="image-logo" src="images/sponsers/garederobe.png" alt="Garederobe logo"></span>
       </div>
     </div>
   </section>
@@ -213,29 +229,29 @@
       <article class="contact-card">
         <h3>André Denaeghel</h3>
         <p>Oprichter &amp; organisatie</p>
-        <a href="mailto:andredenaeghel@icloud.com">andredenaeghel@icloud.com</a>
+        <!-- <a href="mailto:andredenaeghel@icloud.com">andredenaeghel@icloud.com</a> -->
         <a href="tel:+32476532100">+32 476 53 21 00</a>
-        <a href="https://www.instagram.com/andredenaeghel/">Instagram André</a>
+        <a href="https://www.instagram.com/andredenaeghel/" target="_blank">Instagram André</a>
       </article>
 
       <article class="contact-card">
         <h3>Louis Depondt</h3>
         <p>Oprichter &amp; organisatie</p>
-        <a href="mailto:louis@overdrive.be">louis@overdrive.be</a>
-        <a href="tel:+32000000000">+32 000 00 00 00</a>
-        <a href="https://www.instagram.com/louis_depondt/">Instagram Louis</a>
+        <!-- <a href="mailto:louis@overdrive.be">louis@overdrive.be</a> -->
+        <a href="tel:+32491598982">+32 481 59 89 82</a>
+        <a href="https://www.instagram.com/louis_depondt/" target="_blank">Instagram Louis</a>
       </article>
 
       <article class="contact-card">
         <h3>Overdrive</h3>
-        <p>Pure cars, pure fun.</p>
-        <a>Overdrive vzw, België</a>
+        <!-- <p>Pure cars, pure fun.</p> -->
+        <a href="mailto:Overdrivecarevents@gmail.com">Overdrivecarevents@gmail.com</a>
+
         <p>blijf op de hoogte via onze instagram</p>
-        <!-- <a href="mailto:info@overdrive.be">info@overdrive.be</a> -->
-        <a href="https://www.instagram.com/overdrivebelgium/">Instagram Overdrive</a>
+        <a href="https://www.instagram.com/overdrivebelgium/" target="_blank">Instagram Overdrive</a>
       </article>
     </div>
-    <p class="contact-note">Pure cars, pure fun — sinds dag één.</p>
+    <p class="contact-note">Pure cars, pure fun sinds dag één.</p>
   </div>
 </footer>
 

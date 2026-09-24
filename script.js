@@ -19,15 +19,24 @@ onScroll();
 // ===== Mobile nav toggle =====
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('is-open');
+const navBackdrop = document.createElement('div');
+navBackdrop.className = 'nav-backdrop';
+navBackdrop.setAttribute('aria-hidden', 'true');
+document.body.appendChild(navBackdrop);
+
+const setNavOpen = (isOpen) => {
+  navLinks.classList.toggle('is-open', isOpen);
+  navBackdrop.classList.toggle('is-open', isOpen);
   navToggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('nav-open', isOpen);
+};
+
+navToggle.addEventListener('click', () => {
+  setNavOpen(!navLinks.classList.contains('is-open'));
 });
+navBackdrop.addEventListener('click', () => setNavOpen(false));
 navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', () => setNavOpen(false));
 });
 
 // ===== Scroll-spy active link =====
