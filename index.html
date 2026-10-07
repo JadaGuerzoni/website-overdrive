@@ -41,8 +41,8 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <video class="hero-video-bg" autoplay muted loop playsinline aria-hidden="true">
-      <source src="video/Mijn film 2.mp4" type="video/mp4">
+    <video class="hero-video-bg" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-hidden="true">
+      <source src="video/hero.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
@@ -167,7 +167,7 @@
           <li>Story op onze instgram (24h)</li>
     
         </ul>
-        <h3>€200</h3>
+        <h3 class="sponsor-price">€200</h3>
 
         <a href="#contact" class="btn btn-ghost">Interesse? Neem contact op</a>
       </article>
@@ -183,7 +183,7 @@
           <li>Post op onze instagram</li>
           <li>Halve pagina in ons roadboek</li>
         </ul>
-        <h3>€275</h3>
+        <h3 class="sponsor-price">€275</h3>
 
         <a href="#contact" class="btn btn-primary">Interesse? Neem contact op</a>
       </article>
@@ -199,7 +199,7 @@
           <li>Volledige pagina in ons roadboek</li>
           <li>Marketing/POS materiaal zichtbaar</li>
         </ul>
-        <h3>€350</h3>
+        <h3 class="sponsor-price">€350</h3>
 
         <a href="#contact" class="btn btn-ghost">Interesse? Neem contact op</a>
       </article>
@@ -240,32 +240,49 @@
       <h2>Contact</h2>
       <p>Vragen over de rally, sponsoring of deelname? Stuur ons gerust een bericht.</p>
     </div>
-    <img src="images/niuewlogo.jpg" alt="Overdrive" class="contact-logo">
-    <div class="contact-details">
-      <article class="contact-card">
-        <h3>André Denaeghel</h3>
-        <p>Oprichter &amp; organisatie</p>
-        <!-- <a href="mailto:andredenaeghel@icloud.com">andredenaeghel@icloud.com</a> -->
-        <a href="tel:+32476532100">+32 476 53 21 00</a>
-        <a href="https://www.instagram.com/andredenaeghel/" target="_blank">Instagram André</a>
-      </article>
+    <div class="contact-layout">
+      <aside class="contact-info">
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Instagram</span>
+            <a href="https://www.instagram.com/overdrivebelgium/" target="_blank" rel="noopener">@overdrivebelgium</a>
+          </li>
+          <li>
+            <span class="contact-label">André Denaeghel</span>
+            <a href="tel:+32476532100">+32 476 53 21 00</a>
+          </li>
+          <li>
+            <span class="contact-label">E-mail</span>
+            <a href="mailto:Overdrivecarevents@gmail.com">Overdrivecarevents@gmail.com</a>
+          </li>
+        </ul>
+      </aside>
 
-      <article class="contact-card">
-        <h3>Louis Depondt</h3>
-        <p>Oprichter &amp; organisatie</p>
-        <!-- <a href="mailto:louis@overdrive.be">louis@overdrive.be</a> -->
-        <a href="tel:+32491598982">+32 481 59 89 82</a>
-        <a href="https://www.instagram.com/louis_depondt/" target="_blank">Instagram Louis</a>
-      </article>
-
-      <article class="contact-card">
-        <h3>Overdrive</h3>
-        <!-- <p>Pure cars, pure fun.</p> -->
-        <a href="mailto:Overdrivecarevents@gmail.com">Overdrivecarevents@gmail.com</a>
-
-        <p>blijf op de hoogte via onze instagram</p>
-        <a href="https://www.instagram.com/overdrivebelgium/" target="_blank">Instagram Overdrive</a>
-      </article>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/Overdrivecarevents@gmail.com" method="POST">
+        <div class="form-row">
+          <label class="form-field">
+            <span>Naam</span>
+            <input type="text" name="Naam" autocomplete="given-name" required>
+          </label>
+          <label class="form-field">
+            <span>Achternaam</span>
+            <input type="text" name="Achternaam" autocomplete="family-name" required>
+          </label>
+        </div>
+        <label class="form-field">
+          <span>E-mail</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="form-field">
+          <span>Bericht</span>
+          <textarea name="Bericht" rows="5" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="Nieuw bericht via de Overdrive website">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary">Verzenden</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
     <p class="contact-note">Pure cars, pure fun sinds dag één.</p>
   </div>

@@ -39,7 +39,7 @@
 
 <main>
   <div class="recap-hero-shell">
-    <img src="images/Rally2026/Achetgrond-foto.jpg" alt="Rally 2026" class="page-hero-image">
+    <img src="images/Rally2026/Achetgrond-foto.webp" alt="Rally 2026" class="page-hero-image">
     <p class="breadcrumb"><a href="../index.html">Overdrive</a><span>/</span><a href="../index.html#evenementen">Evenementen</a><span>/</span>Rally 2026</p>
 
 
@@ -130,23 +130,21 @@
       <span class="gauge-tick-mark" aria-hidden="true"></span>
       <h2>Foto's</h2>
       <p class="section-sub">Sfeerbeelden van de dag. Nog niet genoeg gezien? </p>
-      <a href="https://drive.google.com/drive/folders/1KmbII7BZd3j06BNtIY8hn1Jp9V_P7p_y?usp=sharing" class="btn btn-primary gallery-link">Bekijk fotoalbum</a>
+      <a href="https://drive.google.com/drive/folders/1KmbII7BZd3j06BNtIY8hn1Jp9V_P7p_y?usp=sharing" class="btn btn-primary gallery-link" target="_blank">Bekijk fotoalbum</a>
         
     </div>
 
     <div class="photo-grid">
-      <div class="photo-tile"><img src="images/Rally2026/porsche-1-4.jpg" alt="Foto sfeer"></div>
-      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-8.jpg" alt="foto zwarte posche"></div>
-      <div class="photo-tile"><img src="images/Rally2026/OVERDRIVE-1-18.jpg" alt="foto twee bmw's"></div>
-      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-19.jpg" alt="foto rode auto"></div>
-      <div class="photo-tile"><img src="images/Rally2026/OVERDRIVE-1-40.jpg" alt="Foto rode porsch"></div>
-      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-38.jpg" alt="foto sfeer lunch"></div>
-      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-22.jpg" alt="foto rij auto's"></div>
-      <div class="photo-tile"><img src="images/Rally2026/OVERDRIVE-1-46.jpg" alt="foto gele auto"></div>
+      <div class="photo-tile"><img src="images/Rally2026/porsche-1-4.webp" alt="Foto sfeer" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-8.webp" alt="foto zwarte posche" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/OVERDRIVE-1-18.webp" alt="foto twee bmw's" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-19.webp" alt="foto rode auto" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/OVERDRIVE-1-40.webp" alt="Foto rode porsch" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-38.webp" alt="foto sfeer lunch" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/overdrive-1-22.webp" alt="foto rij auto's" loading="lazy" decoding="async"></div>
+      <div class="photo-tile"><img src="images/Rally2026/OVERDRIVE-1-46.webp" alt="foto gele auto" loading="lazy" decoding="async"></div>
     </div>
   </section>
-
-  
 
   <section class="section section-alt sponsor-wall" id="sponsorwand">
     <div class="section-head">
@@ -172,32 +170,49 @@
       <h2>Contact</h2>
       <p>Vragen over de rally, sponsoring of deelname? Stuur ons gerust een bericht.</p>
     </div>
-    <img src="images/niuewlogo.jpg" alt="Overdrive" class="contact-logo">
-    <div class="contact-details">
-      <article class="contact-card">
-        <h3>André Denaeghel</h3>
-        <p>Oprichter &amp; organisatie</p>
-        <!-- <a href="mailto:andredenaeghel@icloud.com">andredenaeghel@icloud.com</a> -->
-        <a href="tel:+32476532100">+32 476 53 21 00</a>
-        <a href="https://www.instagram.com/andredenaeghel/" target="_blank">Instagram André</a>
-      </article>
+    <div class="contact-layout">
+      <aside class="contact-info">
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Instagram</span>
+            <a href="https://www.instagram.com/overdrivebelgium/" target="_blank" rel="noopener">@overdrivebelgium</a>
+          </li>
+          <li>
+            <span class="contact-label">André Denaeghel</span>
+            <a href="tel:+32476532100">+32 476 53 21 00</a>
+          </li>
+          <li>
+            <span class="contact-label">E-mail</span>
+            <a href="mailto:Overdrivecarevents@gmail.com">Overdrivecarevents@gmail.com</a>
+          </li>
+        </ul>
+      </aside>
 
-      <article class="contact-card">
-        <h3>Louis Depondt</h3>
-        <p>Oprichter &amp; organisatie</p>
-        <!-- <a href="mailto:louis@overdrive.be">louis@overdrive.be</a> -->
-        <a href="tel:+32491598982">+32 481 59 89 82</a>
-        <a href="https://www.instagram.com/louis_depondt/" target="_blank">Instagram Louis</a>
-      </article>
-
-      <article class="contact-card">
-        <h3>Overdrive</h3>
-        <!-- <p>Pure cars, pure fun.</p> -->
-        <a href="mailto:Overdrivecarevents@gmail.com">Overdrivecarevents@gmail.com</a>
-
-        <p>blijf op de hoogte via onze instagram</p>
-        <a href="https://www.instagram.com/overdrivebelgium/" target="_blank">Instagram Overdrive</a>
-      </article>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/Overdrivecarevents@gmail.com" method="POST">
+        <div class="form-row">
+          <label class="form-field">
+            <span>Naam</span>
+            <input type="text" name="Naam" autocomplete="given-name" required>
+          </label>
+          <label class="form-field">
+            <span>Achternaam</span>
+            <input type="text" name="Achternaam" autocomplete="family-name" required>
+          </label>
+        </div>
+        <label class="form-field">
+          <span>E-mail</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="form-field">
+          <span>Bericht</span>
+          <textarea name="Bericht" rows="5" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="Nieuw bericht via de Overdrive website">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary">Verzenden</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
     <p class="contact-note">Pure cars, pure fun sinds dag één.</p>
   </div>

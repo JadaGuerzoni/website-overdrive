@@ -161,3 +161,36 @@ if (track) {
   window.addEventListener('resize', buildSponsorLoop);
   buildSponsorLoop();
 }
+
+// ===== Contactformulier: verstuurt via FormSubmit naar Overdrive =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  const status = contactForm.querySelector('.form-status');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    status.className = 'form-status';
+    status.textContent = 'Bezig met verzenden…';
+
+    try {
+      const res = await fetch(contactForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(contactForm),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || String(data.success) === 'false') throw new Error(data.message);
+
+      contactForm.reset();
+      status.classList.add('is-success');
+      status.textContent = 'Bedankt! Je bericht is verzonden, we nemen snel contact met je op.';
+    } catch {
+      status.classList.add('is-error');
+      status.textContent = 'Er ging iets mis. Probeer opnieuw of mail ons rechtstreeks.';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}

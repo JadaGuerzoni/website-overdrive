@@ -1,1 +1,2 @@
-video/
+video/*
+!video/hero.mp4

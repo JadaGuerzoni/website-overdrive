@@ -482,6 +482,10 @@ ul {
   margin-top: 10px;
   max-width: 46ch;
 }
+.section-sub.extra{
+  margin-top: 0px;
+
+}
 
 /* Events */
 .event-grid {
@@ -2119,4 +2123,152 @@ body.nav-open {
   .nav-backdrop {
     display: none;
   }
+}
+
+/* ===== Contact: info links + formulier rechts ===== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  text-align: left;
+  align-items: start;
+  margin-top: 70px;
+}
+.contact-info {
+  align-self: stretch;
+  padding-right: 64px;
+  border-right: 1px solid var(--line);
+}
+.contact {
+  padding-top: 140px;
+}
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-label {
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.contact-list a {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+.contact-list a:hover {
+  color: var(--red);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 64px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.form-field span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: var(--white);
+  font: inherit;
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease;
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--red);
+}
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.form-status {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+.form-status.is-success {
+  color: #5fd38d;
+}
+.form-status.is-error {
+  color: var(--red);
+}
+
+@media (max-width: 780px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 44px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    padding-top: 100px;
+  }
+  .contact-form {
+    padding-left: 0;
+  }
+  .contact-info {
+    padding: 0 0 36px;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* ===== Sponsorpakketten: prijs + knop altijd onderaan op één lijn ===== */
+.sponsor-card .sponsor-price {
+  margin-top: auto;
+  padding-top: 10px;
+}
+.sponsor-card .sponsor-price + .btn {
+  margin-top: 0;
 }
