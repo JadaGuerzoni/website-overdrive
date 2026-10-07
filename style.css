@@ -298,7 +298,7 @@ ul {
 .gauge-block {
   position: relative;
   width: min(320px, 80vw);
-  margin: 46px auto 6px;
+  margin: 36px auto 6px;
 }
 .gauge {
   width: 100%;
@@ -1078,7 +1078,7 @@ ul {
 .gauge-block {
   position: relative;
   width: min(320px, 80vw);
-  margin: 46px auto 6px;
+  margin: 36px auto 6px;
 }
 .gauge {
   width: 100%;
@@ -2271,4 +2271,24 @@ body.nav-open {
 }
 .sponsor-card .sponsor-price + .btn {
   margin-top: 0;
+}
+
+/* ===== Hero: datum volgend evenement opvallender ===== */
+.hero-date {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 26px;
+  /* border: 2px solid var(--red); */
+  border-radius: 999px;
+  /* background: rgba(229, 56, 74, 0.14); */
+  /* box-shadow: 0 0 24px rgba(229, 56, 74, 0.35); */
+  margin-bottom: 30px;
 }
