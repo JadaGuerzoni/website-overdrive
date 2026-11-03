@@ -439,7 +439,8 @@ ul {
   gap: 22px;
 }
 .event-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-alt-2);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -486,7 +487,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 .event-chips span {
   font-family: var(--font-mono);
@@ -505,46 +507,68 @@ ul {
 }
 
 /* People */
-.people-grid {
+.crew-list {
+  margin-top: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
 }
-.person-card {
-  background: var(--bg-alt-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 32px;
-  text-align: center;
+.crew-label {
+  grid-column: 1 / -1;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: -4px;
 }
-.person-avatar {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  margin: 0 auto 18px;
-  background: linear-gradient(135deg, var(--red), var(--red-dim));
+.crew-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.crew-number {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--red);
+  border-radius: 8px;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  color: var(--white);
+  background: rgba(229, 56, 74, 0.08);
+  transition: background 0.3s ease;
 }
-.person-card h3 {
+.crew-row:hover .crew-number {
+  background: var(--red);
+}
+.crew-row-helper .crew-number {
+  border-color: var(--muted-dim);
+  background: transparent;
+}
+.crew-row-helper:hover .crew-number {
+  background: transparent;
+  border-color: var(--muted);
+}
+.crew-row-helper .person-role {
+  color: var(--muted);
+}
+.crew-info h3 {
   font-family: var(--font-display);
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
+  line-height: 1.2;
 }
 .person-role {
   color: var(--red);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin: 6px 0 12px;
-}
-.person-card p:last-child {
-  color: var(--muted);
-  font-size: 0.92rem;
+  margin-top: 3px;
 }
 
 /* Sponsors */
@@ -973,12 +997,61 @@ ul {
   object-fit: cover;
   object-position: center;
 }
+
+/* Tags op de teamfoto: de laag volgt exact het bijgesneden beeld (object-fit: cover, 3:2) */
+.about-photo {
+  container-type: size;
+}
+.photo-tags {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100cqw, 150cqh);
+  height: max(100cqh, 66.667cqw);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.photo-tag {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, calc(-100% + 8px));
+  padding: 6px 12px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+.photo-tag::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--red);
+}
+.about-layout:has([data-person='andre'] .crew-number:hover) .photo-tag[data-person='andre'],
+.about-layout:has([data-person='louis'] .crew-number:hover) .photo-tag[data-person='louis'] {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+}
+
 .founding-story {
   position: relative;
   background: linear-gradient(165deg, var(--bg-alt-2), rgba(229, 56, 74, 0.08));
   border: 1px solid var(--red);
   border-radius: var(--radius);
-  padding: 28px 30px;
+  padding: 24px;
 }
 .founding-story p {
   color: var(--white);
@@ -992,6 +1065,22 @@ ul {
   .about-photo {
     min-height: 260px;
     order: -1;
+  }
+}
+@media (max-width: 480px) {
+  .crew-row {
+    gap: 10px;
+  }
+  .crew-number {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  .crew-info h3 {
+    font-size: 0.95rem;
+  }
+  .person-role {
+    font-size: 0.62rem;
   }
 }
 
